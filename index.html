@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>图片格式转换</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"  defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <article>
+      <div class="hoverable" id="files-click-drop">
+        <label for="files-input">
+          <div id="files-input-tip-default">点击选择/拖入文件</div>
+          <div id="files-input-tip-hidden">点击/拖入以重新选择</div>
+        </label>
+        <input type="file" id="files-input" accept="image/*"/>
+        <canvas id="canvas-image"></canvas>
+      </div>
+      <form class="hoverable" id="target-format-form">
+        <input type="radio" id="png-radio-input" name="target-format-radio" value="image/png"/>
+        <label for="png-radio-input" class="radio-label">PNG</label>
+        <input type="radio" id="jpeg-radio-input" name="target-format-radio" value="image/jpeg" />
+        <label for="jpeg-radio-input" class="radio-label">JPEG</label>
+        <input type="radio" id="webp-radio-input" name="target-format-radio" value="image/webp" />
+        <label for="webp-radio-input" class="radio-label">WEBP</label>
+      </form>
+      <div id="convert-button-container">
+        <button class="hoverable" id="convert-button" disabled>转换</button>
+      </div>
+    </article>
+    <footer>
+      <div>developed for <span>烤</span><span>鱼</span>,powered by <span id="my-heart">❤️</span></div>
+      <div>© 2024 melt没路逃</div>
+    </footer>
+  </body>
+</html>
